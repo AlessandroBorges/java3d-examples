@@ -152,21 +152,24 @@ public class JCanvas3DExampleGL2ES2 extends javax.swing.JFrame implements java.a
         iWorld.setVisible(true);
     }//GEN-LAST:event_addButtonActionPerformed
         
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[])
-    {System.setProperty("sun.awt.noerasebackground", "true");
-	System.setProperty("j3d.rend", "jogl2es2");
-	System.setProperty("j3d.displaylist", "false");
-        java.awt.EventQueue.invokeLater(new Runnable()
-        {
-            public void run()
-            {
-                new JCanvas3DExampleGL2ES2().setVisible(true);
-            }
-        });
+    
+    static {
+    	System.setProperty("sun.awt.noerasebackground", "true");
+		System.setProperty("j3d.rend", "jogl2es2");
+		System.setProperty("j3d.displaylist", "false");
     }
+    
+	/**
+	 * @param args the command line arguments
+	 */
+	public static void main(String args[]) {
+		
+		java.awt.EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				new JCanvas3DExampleGL2ES2().setVisible(true);
+			}
+		});
+	}
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addButton;
